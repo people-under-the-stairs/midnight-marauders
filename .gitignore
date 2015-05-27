@@ -34,3 +34,6 @@ credentials.json
 npm-debug.log
 
 config.json
+
+public/assets/js/main.js
+main.js
