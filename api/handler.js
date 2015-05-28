@@ -11,7 +11,7 @@ var User = require('./schema').User;
 var Img  = require('./schema').Img;
 
 // mongolab mongoose connection
-mongoose.connect(config.db.dburl);
+// mongoose.connect(config.db.dburl);
 var db = mongoose.connection;
 
 db.once('open', function(callback){

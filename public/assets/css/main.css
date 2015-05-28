@@ -126,7 +126,7 @@ body {
   height: 100%;
 }
 
-#landingTrendi {
+#landing {
   display: block;
   margin: auto;
   max-width: 80%;
@@ -299,13 +299,6 @@ body {
   margin: 2%;
 }
 
-.ratingLogo {
-  display: block;
-  width: 75%;
-  margin: auto;
-  margin-top: 4%;
-}
-
 #shareID {
   margin: 16px 10px 0;
   color: white;
@@ -326,11 +319,19 @@ body {
   background-color: rgb(11, 185, 213);
 }
 
+/* was ratingLogo */
+.thumbLogo {
+  display: block;
+  width: 75%;
+  margin: auto;
+  margin-top: 4%;
+}
+
 #topBox {
   margin-top: 5%;
 }
 
-#trendingLooks {
+#trendingThings {
   font-size: 23px;
   text-align: left;
   margin-left: 2%;
@@ -348,7 +349,7 @@ body {
 .trendiPeopleImage{
 }
 
-.trendiStats{
+.shareStats{
     text-align: center;
 }
 
