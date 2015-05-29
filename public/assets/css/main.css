@@ -288,6 +288,8 @@ body {
 .rating {
   width: 16%;
   margin: 2%;
+  border-radius: 50%;
+  border: 2px solid grey;
 }
 
 #share-button{
