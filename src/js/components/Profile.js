@@ -23,23 +23,25 @@ var Profile = React.createClass({
     var numOfImgs;
 
     // the users info is stored in this.props.user
-    if (this.props.user !== null){
-      username = this.props.user.username;
-      facebook_id = this.props.user.facebook_id || "";
+    if (this.props.user !== null) {
+
+      username          = this.props.user.username;
+      facebook_id       = this.props.user.facebook_id || "";
       profile_image_url = 'https://graph.facebook.com/' + facebook_id + '/picture?width=300&height=300';
-      images = this.props.userImages || [];
-      avgRating = (this.props.user.avgRating).toFixed(1);
-      numOfImgs = images.length;
+      images            = this.props.userImages || [];
+      avgRating         = (this.props.user.avgRating).toFixed(1);
+      numOfImgs         = images.length;
 
     }
+
     var trendiRating = this.props.rating;
 
-      var trendiLogo = "/public/assets/images/logo-round.png";
+      var thumbsLogo = "/public/assets/images/thumbs-up.png";
       var that = this;
 
       // create the HTML for all the images
-      if (images.length > 0){
-            var imagesHTML = images.map(function(image, index){
+      if (images.length > 0) {
+            var imagesHTML = images.map(function(image, index) {
             var count = 1;
             var rating = [];
             var hidden = "";
@@ -47,14 +49,14 @@ var Profile = React.createClass({
             // create the trendi rating below each image
             while (count<=5){
               if (image.rating < count) hidden = "inactive";
-              rating.push(<img key={Math.random()} className={"rating " + hidden} src={trendiLogo} />);
+              rating.push(<img key={Math.random()} className={"rating " + hidden} src={thumbsLogo} />);
               count +=1;
             }
 
           return (
              <div key={image.file.url} className="imageBox col-md-3 col-sm-4 col-lg-2 col-xs-6">
               <img src={image.file.url} className="image"/>
-               <div className="ratingLogo">{rating}
+               <div className="thumbLogo">{rating}
                </div>
               </div>
             );
@@ -71,7 +73,7 @@ var Profile = React.createClass({
                     <img src={profile_image_url} id="profilePic" className="image"/>
                     <div className="infoBar">
                       <p id="userName">{username}</p>
-                      <div className="trendiStats"><p>TrendiRating: <span className="profile_score">{avgRating}</span> Images shared: <span className="profile_score">{numOfImgs}</span></p>
+                      <div className="shareStats"><p>Average Rating: <span className="profile_score">{avgRating}</span> Images shared: <span className="profile_score">{numOfImgs}</span></p>
                       </div>
                     <div id="upload">
                       <button type="button" className="btn" value="Share image" onClick={this.clickHandler} id="submitID">

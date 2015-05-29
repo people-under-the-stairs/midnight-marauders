@@ -8,7 +8,6 @@
   border: 2px solid black;
 }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #EEF2F1
@@ -47,6 +46,12 @@ body {
   opacity: 0.7;
 }
 
+.container-fluid {
+  background-color: #EEF2F1;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 #cursor {
   position: relative;
   width: 10px;
@@ -78,7 +83,7 @@ body {
   margin: auto;
 }
 
- #homepagecontainer {
+#homepagecontainer {
   position: relative;
 }
 
@@ -126,7 +131,7 @@ body {
   height: 100%;
 }
 
-#landingTrendi {
+#landing {
   display: block;
   margin: auto;
   max-width: 80%;
@@ -142,17 +147,6 @@ body {
   text-align: center;
   margin: 15px 15px auto;
 }
-
- .navbar-default .navbar-nav > .active{
-    color: #000;
-   background: lightgreen;
- }
- .navbar-default .navbar-nav > .active > a,
- .navbar-default .navbar-nav > .active > a:hover,
- .navbar-default .navbar-nav > .active > a:focus {
-      color: #000;
-      background: lightgreen;
- }
 
 #line {
   border: 1px solid lightgrey;
@@ -184,23 +178,6 @@ body {
   border-radius: 4px;
 }
 
-/*Nav bar*/
-
-.container-fluid {
-  background-color: #EEF2F1;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.nav-tabs.nav-justified{
-  box-shadow: 2px 2px 2px lightgray;
-}
-
-.nav-tabs.nav-justified>li {
-  font-size: 18px;
-  border-bottom: none;
-}
-
 .menu_text{
   color: rgb(150, 150, 150) !important;
   font-size: 14px;
@@ -215,6 +192,28 @@ body {
 .navbar-default {
   background-color: #EEF2F1;
   border-color: #EEF2F1;
+}
+
+.navbar-default .navbar-nav > .active {
+  color: #000;
+  background: lightgreen;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000;
+  background: lightgreen;
+ }
+
+
+.nav-tabs.nav-justified {
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.nav-tabs.nav-justified>li {
+  font-size: 18px;
+  border-bottom: none;
 }
 
 .peopleBox {
@@ -233,24 +232,8 @@ body {
   border-radius: 4px;
 }
 
-.profileContainer{
+.profileContainer {
   margin-bottom: 30px;
-}
-
-.profile_score{
-  font-weight:bold;
-}
-
-.publicProfileRow{
-  height:200px;
-}
-
-#social_icons{
-  display: inline;
-  position: relative;
-  float: right;
-  width: 151px;
-  padding-top: 20px;
 }
 
 #profilePic {
@@ -259,12 +242,16 @@ body {
   width: 150px;
   position: relative;
   display: block;
-    border-radius: 100%;
+  border-radius: 100%;
   border: 0;
 }
 
 .profileRow {
   height: 250px;
+}
+
+.profile_score {
+  font-weight: bold;
 }
 
 .ps-top-to-bottom {
@@ -294,16 +281,18 @@ body {
   right: -3px;
 }
 
+.publicProfileRow {
+  height:200px;
+}
+
 .rating {
   width: 16%;
   margin: 2%;
+  border-radius: 50%;
+  border: 2px solid grey;
 }
 
-.ratingLogo {
-  display: block;
-  width: 75%;
-  margin: auto;
-  margin-top: 4%;
+#share-button{
 }
 
 #shareID {
@@ -311,12 +300,21 @@ body {
   color: white;
 }
 
-#share-button{
-}
-
 .share-button-container{
   display: block;
   margin: 0 auto;
+}
+
+.shareStats{
+  text-align: center;
+}
+
+#social_icons {
+  display: inline;
+  position: relative;
+  float: right;
+  width: 151px;
+  padding-top: 20px;
 }
 
 #submitID {
@@ -326,15 +324,16 @@ body {
   background-color: rgb(11, 185, 213);
 }
 
-#topBox {
-  margin-top: 5%;
+/* was ratingLogo */
+.thumbLogo {
+  display: block;
+  width: 75%;
+  margin: auto;
+  margin-top: 4%;
 }
 
-#trendingLooks {
-  font-size: 23px;
-  text-align: left;
-  margin-left: 2%;
-  color: grey;
+#topBox {
+  margin-top: 5%;
 }
 
 #trendingPeople {
@@ -345,11 +344,11 @@ body {
   margin-bottom: 3%;
 }
 
-.trendiPeopleImage{
-}
-
-.trendiStats{
-    text-align: center;
+#trendingThings {
+  font-size: 23px;
+  text-align: left;
+  margin-left: 2%;
+  color: grey;
 }
 
 .twitter-share-button {
@@ -369,6 +368,7 @@ body {
   margin: 0 auto;
 }
 
+/* was wardrobe stuff */
 .wardrobeImage {
   display: inline-block;
   margin: 1%;
@@ -381,6 +381,7 @@ body {
   height: 80%;
   margin-top: 5%
 }
+/* -------------------------- */
 
 /* STYLING FOR THE UPLOAD BUTTON IN MODAL FORM */
 
@@ -444,11 +445,5 @@ position:relative; top:1px;
   #social_icons{
     padding-top:0px;
   }
-
 }
-
-
-
-
-
 

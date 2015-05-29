@@ -1,7 +1,7 @@
 {
   "name": "midnight-marauders",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple platform for users to submit pictures of their favourite cats and/or food. Winner of this year's prestigious 'Internet's Most Creative Idea' award",
   "main": "app.js",
   "scripts": {
     "test": "jest",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/people-under-the-stairs/midnight-marauders"
   },
-  "author": "",
+  "author": "Rory Sedgwick, Per Harald Borgen, Jason C Luu Luu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/people-under-the-stairs/midnight-marauders"

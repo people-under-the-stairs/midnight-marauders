@@ -1,6 +1,6 @@
-var React        = require("react");
-var TrendiPeople = require("./components/TrendiPeople.js");
+var React = require("react");
+var App   = require("./components/App.js");
 
 React.render(
-  <TrendiPeople />, document.getElementById("content")
+  <App />, document.getElementById("content")
   );
