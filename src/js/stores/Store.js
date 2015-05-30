@@ -98,7 +98,7 @@ Dispatcher.register(function(action){
       });
 
       if (action.data.trendingImages) {
-        trendingImages = newImages;
+        trendingImages = newImages.reverse();
       } else if (action.data.userImages) {
         userImages = newImages;
       }
