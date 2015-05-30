@@ -12,6 +12,7 @@ var TrendingThings = React.createClass({
         voter_id       : voter_id,
         rating         : rating
       };
+
       ActionCreators.rate(data);
     },
 
@@ -37,7 +38,7 @@ var TrendingThings = React.createClass({
           while (count <= 5) {
             var rateClick = that.clickHandler.bind(null, count, image._id);
             if (image.rating < count) hidden = "inactive";
-            rating.push(<img key={Math.random()} className={"rating " + hidden} src={thumbsLogo} onClick={rateClick} />);
+            rating.push(<img key={image._id+count} className={"rating "+hidden} src={thumbsLogo} onClick={rateClick} />);
             count +=1;
           }
 

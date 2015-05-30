@@ -22,7 +22,7 @@ var TrendingPeople = React.createClass({
           profile_url       = '/#/' + ele.facebook_id;
 
           return (
-            <div className="col-md-2 col-sm-3 col-xs-6 peopleBox">
+            <div key={index} className="col-md-2 col-sm-3 col-xs-6 peopleBox">
               <a href={profile_url}><img src={profile_image_url} key={Math.random()} className="image" /></a>
             </div>
           );

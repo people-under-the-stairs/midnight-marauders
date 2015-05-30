@@ -82,7 +82,7 @@ var App = React.createClass({
             <div className="row">
               <div className="col-md-12">
                 <div id="topBox">
-                  <Link to="home"><img src="/public/assets/images/NEW_IMAGE" id="logo"/></Link>
+                  <Link to="home"><h3 id="title">RATE MY STUFF</h3></Link>
                     <div id="social_icons">
                       <div className="fb-share-button" data-href="https://trendipeople1.herokuapp.com" data-layout="button">
                     </div>
