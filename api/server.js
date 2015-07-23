@@ -9,7 +9,7 @@ var handler = require('./handler');
 var config  = require('./config');
 
 server.connection({
-  port:  Number(process.env.PORT) || 8080
+  port:  Number(process.env.PORT) || 8000
 });
 
 server.register([require('bell'), require('hapi-auth-cookie')] , function(err){

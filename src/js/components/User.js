@@ -42,23 +42,23 @@ var User = React.createClass({
 
     // check that publicProfile is populated from the AJAX reply. Or else, it triggers an error
     if (this.props.publicProfile.user !== undefined){
-      username = this.props.publicProfile.user.username;
-      images = this.props.publicProfile.images;
-      facebook_id = this.props.publicProfile.user.facebook_id;
+      username          = this.props.publicProfile.user.username;
+      images            = this.props.publicProfile.images;
+      facebook_id       = this.props.publicProfile.user.facebook_id;
       profile_image_url = 'https://graph.facebook.com/' + facebook_id + '/picture?width=300&height=300';
-      avgRating = (this.props.publicProfile.user.avgRating).toFixed(1);
-      numOfImgs = images.length;
+      avgRating         = (this.props.publicProfile.user.avgRating).toFixed(1);
+      numOfImgs         = images.length;
     }
 
       var publicProfile = this.props.publicProfile.images || [];
-      var trendiLogo = "/public/assets/images/logo-round.png";
-      var that = this;
+      var trendiLogo    = "/public/assets/images/thumbs-up.png";
+      var that          = this;
 
       // create the HTML for all the images
       if (images.length > 0){
       var imagesHTML = images.map(function(image, index) {
 
-      var count = 1;
+      var count  = 1;
       var rating = [];
       var hidden = "";
 
@@ -89,7 +89,7 @@ return (
                     <img src={profile_image_url} id="profilePic" className="image"/>
                     <div className="infoBar">
                       <p id="userName">{username}</p>
-                      <div className="trendiStats"><p>TrendiRating: <span className="profile_score">{avgRating}</span> Images shared: <span className="profile_score">{numOfImgs}</span></p>
+                      <div className="shareStats"><p>Average Rating: <span className="profile_score">{avgRating}</span> Images shared: <span className="profile_score">{numOfImgs}</span></p>
                       </div>
 
                   </div>
