@@ -332,6 +332,11 @@ body {
   margin-top: 4%;
 }
 
+#title{
+  color: grey;
+}
+
+
 #topBox {
   margin-top: 5%;
 }
