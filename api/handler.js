@@ -18,16 +18,6 @@ db.once('open', function(callback) {
   console.log('db connected');
 });
 
-var logout = function(request, reply) {
-  if (request.auth.isAuthenticated) {
-    console.log('is authenticated, so logging out!');
-    request.auth.session.clear();
-    reply.redirect('/');
-  } else {
-    reply.redirect('/');
-  }
-};
-
 var home = function(request, reply) {
   console.log("home handler");
   if (request.auth.isAuthenticated) {
@@ -71,6 +61,16 @@ var home = function(request, reply) {
   }
 };
 
+var logout = function(request, reply) {
+  if (request.auth.isAuthenticated) {
+    console.log('is authenticated, so logging out!');
+    request.auth.session.clear();
+    reply.redirect('/');
+  } else {
+    reply.redirect('/');
+  }
+};
+
 var user = function(request, reply) {
   if (request.auth.isAuthenticated) {
     var email = request.auth.credentials.email;
@@ -91,6 +91,7 @@ var user = function(request, reply) {
             user: user,
             images: images
           };
+
           if (images) {
             reply(profile);
           }
@@ -105,7 +106,6 @@ var user = function(request, reply) {
       }
     });
 
-    // if the user isn't authenticated
   } else {
     reply('youre not authenticated');
   }
@@ -345,7 +345,7 @@ module.exports = {
   user          : user,
   rate          : rate,
   trendingImages: trendingImages,
-  trendingPeople:trendingPeople,
+  trendingPeople: trendingPeople,
   profiles      : profiles,
   publicProfile : publicProfile
 };
