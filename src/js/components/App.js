@@ -47,7 +47,7 @@ var App = React.createClass({
   },
 
   componentWillUnmount: function(){
-        Store.removeChangeListener(this._onChange);
+    Store.removeChangeListener(this._onChange);
   },
 
   _onChange: function(){
@@ -84,7 +84,7 @@ var App = React.createClass({
                 <div id="topBox">
                   <Link to="home"><h3 id="title">RATE MY STUFF</h3></Link>
                     <div id="social_icons">
-                      <div className="fb-share-button" data-href="https://trendipeople1.herokuapp.com" data-layout="button">
+                      <div className="fb-share-button" data-href="https://rate-my-stuff.org" data-layout="button">
                     </div>
                     <a href="https://twitter.com/share" className="twitter-share-button" data-url="http://MY_NEW_APP_URL.LOL" data-text="Submit some cat pictures" data-hashtags="YOLO">Tweet</a>
                   </div>
